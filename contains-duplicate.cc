@@ -3,7 +3,7 @@ using namespace std;
 
 bool containsDuplicate(vector<int> &nums)
 {
-    
+
     int n = nums.size();
     unordered_set<int> m;
     m.insert(nums[0]);
