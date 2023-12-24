@@ -1,0 +1,3 @@
+# leetcode
+
+leetcode treasure repo.
