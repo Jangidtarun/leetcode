@@ -27,5 +27,9 @@ int mySqrt(int x)
 
 int main()
 {
-    cout << mySqrt(2147483647) << endl;
+	int query;
+	cout << "enter a number: ";
+	cin >> query;
+	int res = mySqrt(query);
+    cout << "sqrt("<< query << "): " << res << endl;
 }
