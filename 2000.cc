@@ -2,27 +2,19 @@
 using namespace std;
 
 string reversePrefix(string word, char ch) {
-    string tmp;
-    bool flag_found = false;
-    for(char &c: word){
-        tmp.push_back(c);
-        if(c == ch){
-            flag_found = true;
+    int index = 0;
+    for(int i=0;i<word.length();i++){
+        if(word[i] == ch){
+            index = i;
             break;
         }
     }
-    if(!flag_found) return word;
-    
-    cout << "tmp: " << tmp << endl;
-    reverse(tmp.begin(), tmp.end());
-    for(int i=0;i< tmp.length();i++){
-        word[i] = tmp[i];
-    }
+    reverse(word.begin(), word.begin() + 1 + index);
     return word;
 }
 
 int main(){
     string word = "abcd";
-    string newword = reversePrefix(word, 'z');
+    string newword = reversePrefix(word, 'b');
     cout << newword << endl;
 }
